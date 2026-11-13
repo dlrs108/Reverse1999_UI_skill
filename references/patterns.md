@@ -1,21 +1,22 @@
-# Layout Patterns (Abstracted)
+# Layout Patterns
 
-## 1. Archive / Database Layout
-*Replaces "Task/Level Selection".*
-- **Background**: Dark charcoal with a massive, transparent Serif watermark (e.g., "ARCHIVE").
-- **Top Nav**: Left-aligned tabs. Thin 1px lines. Active tab has an orange background and white text.
-- **Main Content**: A vertical stack of horizontal paper cards (from components.md).
-- **Staggering**: Apply slight `margin-left: 2%` and `margin-right: -2%` to alternating cards, creating a physical, stacked effect.
+## 1. Archive Data List (e.g., System Logs, Task Trackers, Notifications)
+- **Background**: Dark canvas with a subtle geometric watermark or noise texture.
+- **Cards**: Horizontal light beige paper cards. Left column features a massive, faded decorative number (e.g., `01`) with 3 small orange dots below it.
+- **Staggering**: Alternating cards must have slight left/right offsets (`margin-left: 1%`, `margin-right: -1%`) to create a physical stack.
+- **States**: 
+  - Default/Pending: Clean paper.
+  - Completed/Archived: Apply a 45° diagonal hatch pattern (`--hatch-pattern`) over the card and add a large, semi-transparent watermark text (e.g., "ARCHIVED") across it.
 
-## 2. Magazine Profile Layout
-*Replaces "Character Info/Dossier".*
-- **Left column**: Massive vertical text, a custom script signature floating below a main image.
-- **Right column**: Paper panels overlapping the dark background.
-- **Typography**: Use a huge orange Drop Cap for the first letter of the text block. Text is justified with tight line-height.
-- **Geometric Accents**: Intersecting triangles with 1px glowing borders.
+## 2. Magazine Dossier (e.g., User Profiles, Product Details, Long-form Articles)
+- **Typography**: Simulate a vintage magazine. Use a massive orange Drop Cap (首字下沉) for the first letter of the text block. Use justified text with tight line-height.
+- **Watermarks**: Place huge, semi-transparent serif English letters (e.g., "PROFILE", "DOSSIER") in the background behind the text.
+- **Geometric Accents**: Use 1px hollow wireframes (e.g., overlapping triangles, intersecting lines) as visual anchors.
+- **Signatures**: Place a tilted, handwritten cursive signature near the title or main image. 
 
-## 3. Status Dashboard Layout
-*Replaces "Combat/Preparation Screen".*
-- **Main Area**: A split view. Left side shows an entity (hero, product, or user). Right side shows stats.
-- **Status Bars**: Use chamfered parallelograms for health/progress bars. Use rows of diamonds (◆/◇) for discrete resource slots.
-- **Action Button**: "Start" or "Execute" button must have an orange background, a chamfered right edge, and a tiny downward triangle `▼` in the top right corner.
+## 3. Immersive Dashboard (e.g., Analytics, Settings, Checkout Flow)
+- **Chamfered Navigation**: Tabs at the top must be chamfered rectangles. The active tab is filled with burnt orange (`#c56032`) and has a tiny downward triangle `▼` in the corner.
+- **Constellation Gauges**: NEVER use standard progress bars. Use SVG to draw a network of nodes and thin lines. Light up the nodes sequentially to show progress.
+- **Form Controls**: 
+  - Dropdowns: Dark panels with 1px borders.
+  - Sliders: The thumb must be a diamond shape (`width: 12px; height: 12px; transform: rotate(45deg); background: var(--accent-orange); border-radius: 0;`).
