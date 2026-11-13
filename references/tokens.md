@@ -1,22 +1,24 @@
 # Design Tokens
 
 ## Colors
-- `--bg-main`: `#151515` (Deep charcoal)
-- `--bg-panel`: `#1e1e1e` (Panel background)
-- `--text-primary`: `#eaeaea` (Off-white)
-- `--text-secondary`: `#888888` (Muted gray)
-- `--accent-orange`: `#c56032` (Primary CTA, highlight)
-- `--accent-red`: `#9e3e35` (Combat warning)
-- `--modal-light`: `#f4e8e3` (Modal text banner)
-- `--health-green`: `#5c8c63` (Health bar)
-- `--energy-glow`: `#f2cb5b` (Constellation full-charge glow)
+- `--bg-dark`: `#151515` (Main background)
+- `--bg-panel-dark`: `#1e1e1e` (Dark UI panels)
+- `--paper-light`: `#e6e2d8` (Light beige for tasks, lists, modals)
+- `--paper-white`: `#f4f0ea` (Brighter paper for character items)
+- `--ink-dark`: `#1a1a1a` (Text on paper)
+- `--ink-light`: `#eaeaea` (Text on dark)
+- `--accent-orange`: `#c56032` (Primary CTA, active tabs, highlights)
+- `--accent-gold`: `#f2cb5b` (Energy full, special rarity)
+- `--state-disabled`: `#555555` (Locked text/icons)
+- `--danger-red`: `#9e3e35` (Delete only)
 
 ## Typography
-- CJK Main: `"Noto Serif SC", "Songti SC", serif`
-- English/Number Accent: `"Didot", "Bodoni MT", serif`
-- Script/Decoration: `"Caveat", cursive`
-- Data/ASCII: `"Courier New", monospace`
+- **CJK Main**: `"Noto Serif SC", "Songti SC", serif` (Ultra-light for titles, regular for body).
+- **English Accent**: `"Didot", "Bodoni MT", serif` (High contrast).
+- **Script Pool (CRITICAL)**: Use a `<style>` import for multiple script fonts and apply them randomly: `"Caveat", "Dancing Script", "Shadows Into Light", cursive`. 
+- **Micro English**: `font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;`
 
-## Borders & Shadows
-- Thin line: `1px solid rgba(255, 255, 255, 0.2)`
-- Card shadow: `box-shadow: 0 10px 30px rgba(0,0,0,0.8)`
+## UI Elements
+- `--border-thin`: `1px solid rgba(255,255,255,0.2)`
+- `--border-ink`: `1px solid rgba(0,0,0,0.3)`
+- `--hatch-pattern`: `repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(0,0,0,0.1) 2px, rgba(0,0,0,0.1) 4px)`
